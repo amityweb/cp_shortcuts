@@ -12,9 +12,13 @@ Go to Add-Ons Extensions and click Enable next to the extension Control Panel Sh
 
 Click Settings to change the name of the menu
 
+## Known Issues that Need Fixing
+
+After adding a new custom button, it is shown in the main menu and not in the shortcut menu. A full refresh to reload the Javascript is needed. 
+
 ## Bugs & Feature Requests
 
-[Issue tracker](http://github.com/amityweb/cp_shortcuts/issues)
+[Issue tracker](http://github.com/amityweb/cp-shortcuts/issues)
 
 Before reporting bugs or requesting any features, please check that it does not already exist.
 
