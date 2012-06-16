@@ -18,7 +18,7 @@ After adding a new custom button, it is shown in the main menu and not in the sh
 
 ## Bugs & Feature Requests
 
-[Issue tracker](http://github.com/amityweb/cp-shortcuts/issues)
+[Issue tracker](http://github.com/amityweb/cp_shortcuts/issues)
 
 Before reporting bugs or requesting any features, please check that it does not already exist.
 
