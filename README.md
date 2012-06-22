@@ -18,10 +18,14 @@ After adding a new custom button, it is shown in the main menu and not in the sh
 
 ## Bugs & Feature Requests
 
-[Issue tracker](http://github.com/amityweb/cp_shortcuts/issues)
+[Issue tracker](https://github.com/amityweb/cp_shortcuts/issues)
 
 Before reporting bugs or requesting any features, please check that it does not already exist.
 
 ## Current version
 
-1.0
+1.1
+
+## Changelog
+
+v1.1 Removed the CSS and JS to hide/show the menu on load due to initial installation not showing menu due to cached JS

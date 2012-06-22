@@ -16,16 +16,15 @@ class Cp_shortcuts_ext {
 
 	var $name				= 'Control Panel Shortcuts';
 	var $description	  = 'Puts all your shortcuts into a single parent menu';
-	var $version			= '1.0';
+	var $version			= '1.1';
 	var $settings_exist  = 'y';
 	var $docs_url			  = '';
-    var $settings        = array();
+	var $settings		= array();
 	
 	function __construct($settings='')
 	{
-        $this->EE =& get_instance();
-        
-        $this->settings = $settings;
+		$this->EE =& get_instance();
+		$this->settings = $settings;
 	}
 
 	function activate_extension()
@@ -35,7 +34,6 @@ class Cp_shortcuts_ext {
 		);
 	
 		$hooks = array(
-			'cp_css_end',
 			'cp_js_end'
 		);
 		
@@ -49,7 +47,7 @@ class Cp_shortcuts_ext {
 				'priority'  => 10,
 				'version'	=> $this->version,
 				'enabled'	=> 'y'
-				));
+			));
 		}
 	}
 
@@ -67,8 +65,8 @@ class Cp_shortcuts_ext {
 	
 		 $this->EE->db->where('class', __CLASS__);
 		 $this->EE->db->update(
-						 'extensions',
-						 array('version' => $this->version)
+			'extensions',
+			array('version' => $this->version)
 		 );
 	}
 
@@ -100,8 +98,8 @@ class Cp_shortcuts_ext {
 		 $this->EE->db->update('extensions', array('settings' => serialize($_POST)));
 	
 		 $this->EE->session->set_flashdata(
-			  'message_success',
-			  $this->EE->lang->line('preferences_updated')
+			'message_success',
+			$this->EE->lang->line('preferences_updated')
 		 );
 	}
 
@@ -140,19 +138,9 @@ class Cp_shortcuts_ext {
 				})
 				// Find last item in menu and add top level menu
 				$("#navigationTabs > li").last().before("<li class=\"parent\"><a href=\"#\" class=\"first_level\">"+menu_name+"</a><ul>"+custom_quick_tab_items+"</ul></li>");
-				
-				// Show menu after JS processed
-				$("#navigationTabs").css("visibility","visible");
 				';
 				return $js;
 	}
-	
-	function cp_css_end($data)
-	{
-		$css = '#navigationTabs { visibility: hidden; }';
-		return $css;
-	}
-	
 	
 	function get_quick_tabs_rows()
 	{
